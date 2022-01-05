@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>63104111 calculator</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <style>
+
+    
+     
+    </style>
+</head>
+
+<body>
+    <div class="box">
+
+        <h1 class="name"> calculator</h1>
+      
+        <p><input type="text" id="num1" ></p>
+        <p><input type="text" id="num2" ></p>
+        
+        <button id="btnplus">+</button>
+        <button id="btnminus">-</button>
+        <button id="btnmultiply">*</button>
+        <button id="btndivide">/</button>
+    
+    
+    </div>
+
+    <p><span id="result"></span></p>
+
+
+    <script>
+        $("#btnplus").click(() => {
+            var n = $("#num1").val();
+            var m = $("#num2").val();
+            $("#num1").val("");
+            $("#num2").val("");
+            x = parseInt(n) + parseInt(m)
+            $("#result").text(x);
+        });
+        $("#btnminus").click(() => {
+            var n = $("#num1").val();
+            var m = $("#num2").val();
+            $("#num1").val("");
+            $("#num2").val("");
+            x = parseInt(n) - parseInt(m)
+            $("#result").text(x);
+        });
+        $("#btnmultiply").click(() => {
+            var n = $("#num1").val();
+            var m = $("#num2").val();
+            $("#num1").val("");
+            $("#num2").val("");
+            x = parseInt(n) * parseInt(m)
+            $("#result").text(x);
+        });
+        $("#btndivide").click(() => {
+            var n = $("#num1").val();
+            var m = $("#num2").val();
+            $("#num1").val("");
+            $("#num2").val("");
+            x = parseInt(n) / parseInt(m)
+            if (isNaN(x) || x == "Infinity") {
+                x = "Cannot divide by zero"
+            }
+            $("#result").text(x);
+        });
+    </script>
+
+
+</body>
+
+</html>
